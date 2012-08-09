@@ -8,5 +8,5 @@ package com.github.L2G.rjb_example;
  *
  */
 public interface IDisplayDevice {
-	public void showProgram(String programName);
+	public void showProgram(CableTvProgram program);
 }

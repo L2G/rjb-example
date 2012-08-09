@@ -6,9 +6,16 @@ Rjb.load('bin')
 CableBox = Rjb.import("#{PKG}.CableBox")
 
 # This will have the Java interface IDisplayDevice bound to it.
+# A CableBox will react to its channelUp method by finding the next
+# program to show and calling showProgram on whatever object it has
+# that implements IDisplayDevice.
 class Television
-   def showProgram(string)
-      $stdout.puts "Television: now showing #{string}"
+   def initialize
+      $stdout.puts "Television: newly set up, not showing anything"
+   end
+   
+   def showProgram(program)
+      $stdout.puts "Television: now showing #{program.getName}"
    end
 end
 
