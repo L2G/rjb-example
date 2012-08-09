@@ -36,6 +36,8 @@ public class CableBox {
 		if (channel >= programListing.length) {
 			channel = 0;
 		}
+		System.out.println("Cable box: * click *");
+		this.sendVideo();
 	}
 	
 	private void sendVideo() {
